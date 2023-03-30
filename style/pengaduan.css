@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+nav {
+  background-color: #0e5e6f;
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0e5e6f;
+  z-index: 999;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.205);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container .nav_brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .container .nav_brand img {
+  width: 55px;
+  margin-right: 15px;
+}
+nav .container .nav_brand h4 {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  line-height: 113.5%;
+}
+nav .container .list_link {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .container .list_link li:not(:last-child) {
+  margin-right: 64px;
+}
+nav .container .list_link li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+}
+nav .container .list_link li a:hover {
+  font-weight: 800;
+}
+nav .container p {
+  font-weight: 700;
+  color: white;
+}
+nav .container .profile_mhs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+nav .container .profile_mhs img.profile {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f2deba;
+}
+nav .container .profile_mhs .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+nav .container .profile_mhs .name:clicked ul {
+  display: block;
+}
+nav .container .profile_mhs .name ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 40px;
+  list-style: none;
+  border-radius: 5px;
+  border: 2.5px solid #0e5e6f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.413);
+}
+nav .container .profile_mhs .name ul li:not(:last-child) {
+  border-bottom: 2.5px solid #0e5e6f;
+}
+nav .container .profile_mhs .name ul li a {
+  display: block;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #0e5e6f;
+  font-weight: 600;
+}
+nav .container .btn_login {
+  padding: 4px 26px;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  transition: all ease-in-out 0.3s;
+}
+nav .container .btn_login:hover {
+  background-color: white;
+  color: #0e5e6f;
+}
+
+main .container {
+  margin: 120px;
+  color: #0e5e6f;
+}
+main .container h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 36px;
+}
+main .container p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 55px;
+}
+main .container form {
+  margin: 0 20%;
+}
+main .container form label,
+main .container form button {
+  display: block;
+  width: 100%;
+}
+main .container form .select,
+main .container form input,
+main .container form textarea {
+  margin-bottom: 15px;
+}
+main .container form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+main .container form .select select {
+  display: none;
+}
+main .container form textarea {
+  width: 100%;
+  background-color: #f2deba;
+  border: 1px solid #0e5e6f;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #0e5e6f;
+  outline: none;
+}
+main .container form .bukti input[type=file] {
+  position: absolute;
+  top: -1000px;
+}
+main .container form .bukti {
+  cursor: pointer;
+  border: 1px solid #0e5e6f;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  background: #f2deba;
+  display: inline-block;
+}
+main .container form .bukti:hover {
+  background: #f7ce82;
+}
+main .container form .bukti:active {
+  background: #f2deba;
+}
+main .container form .bukti:invalid + span {
+  color: #000000;
+}
+main .container form .bukti:valid + span {
+  color: #ffffff;
+}
+main .container form button {
+  padding: 12px;
+  font-weight: 700px;
+  font-size: 20px;
+  color: white;
+  background-color: #0e5e6f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .container form button:hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.205);
+}
+
+footer {
+  background-color: #0e5e6f;
+}
+footer p {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  font-weight: 800;
+}/*# sourceMappingURL=pengaduan.css.map */

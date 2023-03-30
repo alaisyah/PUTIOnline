@@ -13,8 +13,8 @@ $second-color: #f2deba;
   width: 80%;
   margin: auto;
 }
-body{
-    background-color: $second-color;
+body {
+  background-color: $second-color;
 }
 
 nav {
@@ -31,7 +31,8 @@ nav {
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.205);
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    column-gap: 29%;
     align-items: center;
     .nav_brand {
       display: flex;
@@ -69,91 +70,78 @@ nav {
         }
       }
     }
-    .btn_login {
-      padding: 4px 26px;
-      border: 2px solid white;
-      border-radius: 4px;
-      color: white;
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: 500;
-      transition: all ease-in-out 0.3s;
-      &:hover {
-        background-color: white;
-        color: $primary-color;
-      }
-    }
   }
 }
 
-main{
-    margin: 214px 214px 100px;
-    background-color: white;
-    border-top: 10px solid $primary-color;
-    border-radius: 5px;
-    padding: 50px 115px;
-    color: $primary-color;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    h2{
-        font-weight: 700;
-        font-size: 40px;
-        text-align: center;
+main {
+  margin: 214px 214px 100px;
+  background-color: white;
+  border-top: 10px solid $primary-color;
+  border-radius: 5px;
+  padding: 50px 115px;
+  color: $primary-color;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+  }
+  p {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin: 16px auto 54px;
+  }
+  form {
+    label {
+      font-weight: 600;
+      font-size: 15px;
     }
-    p{
-        font-weight: 600;
-        font-size: 20px;
-        text-align: center;
-        margin: 16px auto 54px;
+    .input-form {
+      outline: 1px solid $primary-color;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      img {
+        padding: 10px;
+        border-right: 1px solid $primary-color;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        color: $primary-color;
+        box-sizing: border-box;
+      }
     }
-    form{
-        label{
-            font-weight: 600;
-            font-size: 15px;
-        }
-        .input-form{
-            outline: 1px solid $primary-color;
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            img{
-                padding: 10px;
-                border-right: 1px solid $primary-color;
-            }
-            input{
-                padding: 10px;
-                width: 100%;
-                background-color: transparent;
-                outline: none; border: none;
-                font-weight: 500;
-                font-size: 16px;
-                color: $primary-color;
-                box-sizing: border-box;
-            }
-        }
-        button{
-            width: 100%;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 10px;
-            background-color: $primary-color;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        a{
-            display: block;
-            max-width: max-content;
-            margin: auto;
-            text-align: center;
-            color: $primary-color;
-            font-weight: 600;
-            margin: auto;
-        }
+    button {
+      width: 100%;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 10px;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      margin-bottom: 10px;
+      cursor: pointer;
     }
+    a {
+      display: block;
+      max-width: max-content;
+      margin: auto;
+      text-align: center;
+      color: $primary-color;
+      font-weight: 600;
+      margin: auto;
+    }
+  }
 }
 
 footer {

@@ -29,7 +29,9 @@ nav {
 }
 nav .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  -moz-column-gap: 29%;
+       column-gap: 29%;
   align-items: center;
 }
 nav .container .nav_brand {
@@ -65,20 +67,6 @@ nav .container .list_link li a {
 }
 nav .container .list_link li a:hover {
   font-weight: 800;
-}
-nav .container .btn_login {
-  padding: 4px 26px;
-  border: 2px solid white;
-  border-radius: 4px;
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
-  transition: all ease-in-out 0.3s;
-}
-nav .container .btn_login:hover {
-  background-color: white;
-  color: #0e5e6f;
 }
 
 main {

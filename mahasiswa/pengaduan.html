@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pengaduan | Mahasiswa</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../style/pengaduan.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav_brand">
+          <img src="../assets/img/logo.png" alt="Logo PUTI ONLINE" />
+          <h4>PUTI<br />ONLINE</h4>
+        </div>
+        <!-- <ul class="list_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tatacara.html">Tata Cara</a></li>
+        </ul> -->
+        <!-- <a href="mahasiswa/loginmhs.html" class="btn_login">Login</a> -->
+        <p>Pengaduan Umum TI</p>
+        <div class="profile_mhs">
+          <img
+            class="profile"
+            src="../assets/img/profile.jpg"
+            alt="Profile_Mahasiswa"
+          />
+          <div class="name">
+            <p>Fulan bin Fulan</p>
+            <img src="../assets/img/arrow-drop.png" alt="Arrow Drop" />
+            <ul>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Profile Saya</a></li>
+              <li><a href="#">Edit Profile</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <h1>PENGADUAN MAHASISWA</h1>
+        <p>Ungkapkan keluh kesahmu disini ya...</p>
+        <form action="">
+          <label for="kategori">Kategori</label>
+          <div class="select">
+            <select name="kategori" id="kategori">
+              <option value="">Kategori Laporan</option>
+              <option value="">Fasilitas Umum</option>
+              <option value="">Laboratorium</option>
+              <option value="">Kebersihan</option>
+            </select>
+          </div>
+          <label for="bukti">Bukti Foto</label>
+          <label class="bukti">
+            <input type="file" name="bukti" id="bukti" />
+            <span>Pilih Foto Laporan</span>
+          </label>
+          <label for="deskripsi">Deskripsi</label>
+          <textarea
+            name="deskripsi"
+            id="deskripsi"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button type="submit">Kirim Laporan</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p class="container">Copyright &copy; 2023 by PUTI ONLINE</p>
+    </footer>
+  </body>
 </html>
