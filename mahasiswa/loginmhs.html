@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Mahasiswa | PUTI Online</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav_brand">
+          <img src="../assets/img/logo.png" alt="Logo PUTI ONLINE" />
+          <h4>PUTI<br />ONLINE</h4>
+        </div>
+        <ul class="list_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tatacara.html">Tata Cara</a></li>
+        </ul>
+        <a href="mahasiswa/loginmhs.html" class="btn_login">Login</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <main>
+        <h2>LOGIN MAHASISWA</h2>
+        <p>Please login with your account</p>
+        <form action="">
+          <label for="username">Username</label>
+          <div class="input-form">
+            <img src="../assets/img/user.png" alt="user-icon" width="24px" />
+            <input type="text" name="username" id="username" />
+          </div>
+          <label for="password">Password</label>
+          <div class="input-form">
+            <img src="../assets/img/lock.png" alt="lock-icon" width="24px" />
+            <input type="text" name="password" id="password" />
+          </div>
+          <button type="submit">Login Now</button>
+          <a href="../admin/loginadmin.html">Login as Admin</a>
+        </form>
+      </main>
+    </div>
+
+    <footer>
+      <p class="container">Copyright &copy; 2023 by PUTI ONLINE</p>
+    </footer>
+  </body>
 </html>
