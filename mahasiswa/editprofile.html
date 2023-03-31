@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Profile | Mahasiswa</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../style/editprofile.css" />
+  </head>
+  <body>
+    <body>
+      <nav>
+        <div class="container">
+          <div class="nav_brand">
+            <img src="../assets/img/logo.png" alt="Logo PUTI ONLINE" />
+            <h4>PUTI<br />ONLINE</h4>
+          </div>
+          <!-- <ul class="list_link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tatacara.html">Tata Cara</a></li>
+              </ul> -->
+          <!-- <a href="mahasiswa/loginmhs.html" class="btn_login">Login</a> -->
+          <p>Pengaduan Umum TI</p>
+          <div class="profile_mhs">
+            <img
+              class="profile"
+              src="../assets/img/profile.jpg"
+              alt="Profile_Mahasiswa"
+            />
+            <div class="name">
+              <p>Fulan bin Fulan</p>
+              <img src="../assets/img/arrow-drop.png" alt="Arrow Drop" />
+              <input type="checkbox" name="check" id="check" />
+              <ul>
+                <li><a href="../index.html">Dashboard</a></li>
+                <li><a href="profilemhs.html">Profile Saya</a></li>
+                <li><a href="editprofile.html">Edit Profile</a></li>
+                <li><a href="loginmhs.html">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="container">
+          <h1>HALAMAN EDIT PROFILE</h1>
+          <form action="">
+            <div class="image">
+              <img src="../assets/img/profile.jpg" alt="Profile Mahasiswa" />
+              <label for="foto">
+                <img src="../assets/img/camera.png" alt="icon-camera" />
+                <input type="file" name="foto" id="foto" />
+              </label>
+            </div>
+            <label for="nama">Nama Mahasiswa</label>
+            <input type="text" name="nama" value="FULAN BIN FULAN" id="nama" />
+            <label for="username">Username</label>
+            <input type="text" name="username" value="362258302178" id="usename" />
+            <label for="password">Password</label>
+            <input type="password" name="password" value="Rahasia Banget" id="password" />
+            <button type="submit">Edit Profile</button>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <p class="container">Copyright &copy; 2023 by PUTI ONLINE</p>
+      </footer>
+    </body>
+  </body>
 </html>

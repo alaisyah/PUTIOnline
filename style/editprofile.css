@@ -143,99 +143,94 @@ nav .container .btn_login:hover {
 }
 
 main .container {
-  margin: 120px;
+  margin: 130px;
   color: #0e5e6f;
 }
 main .container h1 {
-  text-align: center;
   font-weight: 800;
-  font-size: 36px;
-}
-main .container p {
+  margin: 42px 0 52px;
   text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 55px;
 }
 main .container form {
-  margin: 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-main .container form label,
-main .container form button {
+main .container form .image {
+  position: relative;
+  border-radius: 5px;
+  border: 8px solid #0e5e6f;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  margin: 0 auto 50px;
+}
+main .container form .image img {
+  width: 240px;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container form .image:hover label {
+  bottom: 0;
+}
+main .container form .image:hover label img {
   display: block;
-  width: 100%;
 }
-main .container form .select,
-main .container form input,
-main .container form textarea {
-  margin-bottom: 15px;
+main .container form .image label {
+  display: block;
+  position: absolute;
+  background-color: rgba(14, 93, 111, 0.3568627451);
+  top: 0;
+  right: 0;
+  bottom: 1000;
+  left: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
-main .container form label {
-  font-weight: 500;
-  margin-bottom: 5px;
+main .container form .image label img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
 }
-main .container form .select select {
-  width: 100%;
-  padding: 7px;
-  background-color: #f2deba;
-  border: 1px solid #0e5e6f;
-  border-radius: 5px;
-  color: #0e5e6f;
-  font-weight: 600;
-  font-size: 12px;
+main .container form .image label input[type=file] {
+  position: absolute;
+  display: none;
 }
-main .container form textarea {
-  width: 100%;
-  background-color: #f2deba;
-  border: 1px solid #0e5e6f;
-  border-radius: 5px;
+main .container form > label, main .container form > input,
+main .container form button {
+  width: 70%;
+  margin: 5px 0;
+}
+main .container form > input,
+main .container form button {
   padding: 10px;
   box-sizing: border-box;
-  color: #0e5e6f;
+}
+main .container form > input {
+  background-color: transparent;
+  border: 3px solid #0e5e6f;
+  border-radius: 3px;
   outline: none;
-}
-main .container form .bukti {
-  font-weight: 600;
-  font-size: 12px;
-}
-main .container form .bukti input[type=file] {
-  position: absolute;
-  top: -1000px;
-}
-main .container form .bukti {
-  cursor: pointer;
-  border: 1px solid #0e5e6f;
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  background: #f2deba;
-  display: inline-block;
-}
-main .container form .bukti:hover {
-  background: #f7ce82;
-}
-main .container form .bukti:active {
-  background: #f2deba;
-}
-main .container form .bukti:invalid + span {
-  color: #000000;
-}
-main .container form .bukti:valid + span {
-  color: #ffffff;
+  color: #0e5e6f;
+  font-weight: 500;
 }
 main .container form button {
-  padding: 12px;
-  font-weight: 700px;
-  font-size: 20px;
-  color: white;
   background-color: #0e5e6f;
   border: none;
-  border-radius: 5px;
+  outline: none;
+  font-weight: 800;
+  font-size: 16px;
+  color: white;
   cursor: pointer;
+  border-radius: 3px;
 }
 main .container form button:hover {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.205);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.238);
 }
 
 footer {
@@ -247,4 +242,4 @@ footer p {
   font-size: 15px;
   color: white;
   font-weight: 800;
-}/*# sourceMappingURL=pengaduan.css.map */
+}/*# sourceMappingURL=editprofile.css.map */

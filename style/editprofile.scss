@@ -89,9 +89,12 @@ nav {
         column-gap: 10px;
         cursor: pointer;
         position: relative;
-        input[type="checkbox"]{
+        input[type="checkbox"] {
           position: absolute;
-          top: 0; right: 0; bottom: 0; left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
           width: 100% !important;
           opacity: 0;
           cursor: pointer;
@@ -119,7 +122,7 @@ nav {
               text-decoration: none;
               color: $primary-color;
               font-weight: 600;
-              &:hover{
+              &:hover {
                 background-color: $primary-color;
                 color: white;
               }
@@ -147,99 +150,91 @@ nav {
 
 main {
   .container {
-    margin: 120px;
+    margin: 130px;
     color: $primary-color;
     h1 {
-      text-align: center;
       font-weight: 800;
-      font-size: 36px;
-    }
-    p {
+      margin: 42px 0 52px;
       text-align: center;
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 55px;
     }
     form {
-      margin: 0 20%;
-      label,
-      button {
-        display: block;
-        width: 100%;
-      }
-      .select,
-      input,
-      textarea {
-        margin-bottom: 15px;
-      }
-      label {
-        font-weight: 500;
-        margin-bottom: 5px;
-      }
-      .select{
-        select{
-          // display: none;
-          width: 100%;
-          padding: 7px;
-          background-color: $second-color;
-          border: 1px solid $primary-color;
-          border-radius: 5px;
-          color: $primary-color;
-          font-weight: 600;
-          font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .image {
+        position: relative;
+        border-radius: 5px;
+        border: 8px solid $primary-color;
+        width: 240px;
+        height: 240px;
+        overflow: hidden;
+        margin: 0 auto 50px;
+        img {
+          width: 240px;
+          height: 240px;
+          object-fit: cover;
+        }
+        &:hover {
+          label {
+            bottom: 0;
+            img {
+              display: block;
+            }
+          }
+        }
+        label {
+          display: block;
+          position: absolute;
+          background-color: #0e5d6f5b;
+          top: 0;
+          right: 0;
+          bottom: 1000;
+          left: 0;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            display: none;
+          }
+          input[type="file"] {
+            position: absolute;
+            display: none;
+          }
         }
       }
-      textarea {
-        width: 100%;
-        background-color: $second-color;
-        border: 1px solid $primary-color;
-        border-radius: 5px;
+      & > label,
+      & > input,
+      button {
+        width: 70%;
+        margin: 5px 0;
+      }
+      & > input,
+      button {
         padding: 10px;
         box-sizing: border-box;
-        color: $primary-color;
+      }
+      &>input{
+        background-color: transparent;
+        border: 3px solid $primary-color;
+        border-radius: 3px;
         outline: none;
+        color: $primary-color;
+        font-weight: 500;
       }
-      .bukti {
-        font-weight: 600;
-        font-size: 12px;
-        input[type="file"] {
-          position: absolute;
-          top: -1000px;
-        }
-        & {
-          cursor: pointer;
-          border: 1px solid $primary-color;
-          border-radius: 5px;
-          padding: 5px;
-          margin-bottom: 15px;
-          box-sizing: border-box;
-          background: $second-color;
-          display: inline-block;
-        }
-        &:hover {
-          background: #f7ce82;
-        }
-        &:active {
-          background: $second-color;
-        }
-        &:invalid + span {
-          color: #000000;
-        }
-        &:valid + span {
-          color: #ffffff;
-        }
-      }
-      button {
-        padding: 12px;
-        font-weight: 700px;
-        font-size: 20px;
-        color: white;
+      button{
         background-color: $primary-color;
-        border: none;
-        border-radius: 5px;
+        border: none; outline: none;
+        font-weight: 800;
+        font-size: 16px;
+        color: white;
         cursor: pointer;
-        &:hover {
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.205);
+        border-radius: 3px;
+        &:hover{
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.238);
         }
       }
     }

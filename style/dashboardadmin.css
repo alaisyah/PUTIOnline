@@ -142,100 +142,124 @@ nav .container .btn_login:hover {
   color: #0e5e6f;
 }
 
+main {
+  min-height: 90vh;
+}
 main .container {
   margin: 120px;
   color: #0e5e6f;
+  padding: 0 10%;
+  box-sizing: border-box;
 }
 main .container h1 {
-  text-align: center;
   font-weight: 800;
-  font-size: 36px;
-}
-main .container p {
   text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 55px;
+  padding: 42px 0 75px;
 }
 main .container form {
-  margin: 0 20%;
-}
-main .container form label,
-main .container form button {
-  display: block;
-  width: 100%;
-}
-main .container form .select,
-main .container form input,
-main .container form textarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
-main .container form label {
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-main .container form .select select {
-  width: 100%;
-  padding: 7px;
-  background-color: #f2deba;
-  border: 1px solid #0e5e6f;
-  border-radius: 5px;
-  color: #0e5e6f;
-  font-weight: 600;
-  font-size: 12px;
-}
-main .container form textarea {
-  width: 100%;
-  background-color: #f2deba;
-  border: 1px solid #0e5e6f;
-  border-radius: 5px;
-  padding: 10px;
-  box-sizing: border-box;
-  color: #0e5e6f;
-  outline: none;
-}
-main .container form .bukti {
-  font-weight: 600;
-  font-size: 12px;
-}
-main .container form .bukti input[type=file] {
-  position: absolute;
-  top: -1000px;
-}
-main .container form .bukti {
-  cursor: pointer;
-  border: 1px solid #0e5e6f;
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  background: #f2deba;
-  display: inline-block;
-}
-main .container form .bukti:hover {
-  background: #f7ce82;
-}
-main .container form .bukti:active {
-  background: #f2deba;
-}
-main .container form .bukti:invalid + span {
-  color: #000000;
-}
-main .container form .bukti:valid + span {
-  color: #ffffff;
-}
-main .container form button {
-  padding: 12px;
-  font-weight: 700px;
-  font-size: 20px;
-  color: white;
-  background-color: #0e5e6f;
+main .container form .search input {
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 2px;
+  outline: 1px solid #0e5e6f;
+  padding: 2px;
+  color: #0e5e6f;
+  font-weight: 600;
 }
-main .container form button:hover {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.205);
+main .container form .bold {
+  font-weight: 700;
+}
+main .container form .category_search .checkbox {
+  border: 1px solid #0e5e6f;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+main .container form .category_search .checkbox:not(:last-child) {
+  margin-right: 5px;
+}
+main .container form .category_search .checkbox input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+main .container form .category_search .checkbox input:checked ~ label {
+  background-color: #0e5e6f;
+  color: white;
+}
+main .container form .category_search .checkbox label {
+  height: 100%;
+  cursor: pointer;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}
+main .container .riwayat_laporan > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: #f2deba;
+  border: 2px solid #0e5e6f;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+main .container .riwayat_laporan > div .detail_laporan {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 10px;
+  grid-template-areas: "left right" "area area";
+}
+main .container .riwayat_laporan > div .detail_laporan h4 {
+  font-weight: 800;
+  font-size: 14px;
+}
+main .container .riwayat_laporan > div .detail_laporan .pengusul {
+  grid-area: left;
+}
+main .container .riwayat_laporan > div .detail_laporan .category {
+  grid-area: right;
+  opacity: 0.7;
+}
+main .container .riwayat_laporan > div .detail_laporan p {
+  font-weight: 600;
+  font-size: 14px;
+  grid-area: area;
+}
+main .container .riwayat_laporan > div .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+main .container .riwayat_laporan > div .status a {
+  display: inline-block;
+  width: 100px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+}
+main .container .riwayat_laporan > div .approve {
+  background-color: #0e5e6f;
+}
+main .container .riwayat_laporan > div .delete {
+  background-color: red;
 }
 
 footer {
@@ -247,4 +271,4 @@ footer p {
   font-size: 15px;
   color: white;
   font-weight: 800;
-}/*# sourceMappingURL=pengaduan.css.map */
+}/*# sourceMappingURL=dashboardadmin.css.map */
