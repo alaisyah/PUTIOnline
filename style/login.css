@@ -184,6 +184,7 @@ main {
 @media screen and (max-width: 1100px) {
   main {
     margin: 214px 10px 0;
+    padding: 50px 20px;
   }
 }
 main h2 {

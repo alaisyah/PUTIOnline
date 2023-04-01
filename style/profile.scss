@@ -167,7 +167,7 @@ nav {
 
 main {
   .container {
-    margin: 120px 0;
+    margin: 120px auto;
     color: $primary-color;
     .profile {
       margin: 220px 0 180px;
@@ -189,6 +189,11 @@ main {
       .detail {
         @media screen and (max-width: 1100px) {
           text-align: center;
+          display: flex;
+          flex-direction: column;
+          a{
+            margin: 0 0 10px !important;
+          }
         }
         h1 {
           font-weight: 800;
@@ -262,6 +267,9 @@ main {
                 "left left"
                 "right right"
                 "area area";
+                p{
+                  font-size: 12px !important;
+                }
             }
             h4 {
               font-weight: 800;
@@ -273,10 +281,12 @@ main {
             .category {
               grid-area: right;
               opacity: 0.7;
+              margin-top: -10px;
+              font-size: 12px !important;
             }
             p {
               font-weight: 600;
-              font-size: 14px;
+              font-size: 12px;
               grid-area: area;
             }
           }

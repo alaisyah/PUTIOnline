@@ -164,7 +164,7 @@ nav .container .btn_login:hover {
 }
 
 main .container {
-  margin: 120px 0;
+  margin: 120px auto;
   color: #0e5e6f;
 }
 main .container .profile {
@@ -192,6 +192,11 @@ main .container .profile img {
 @media screen and (max-width: 1100px) {
   main .container .profile .detail {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  main .container .profile .detail a {
+    margin: 0 0 10px !important;
   }
 }
 main .container .profile .detail h1 {
@@ -263,6 +268,9 @@ main .container .riwayat_laporan .laporan > div .detail_laporan {
     grid-area: deskripsi !important;
     grid-template-areas: "left left" "right right" "area area";
   }
+  main .container .riwayat_laporan .laporan > div .detail_laporan p {
+    font-size: 12px !important;
+  }
 }
 main .container .riwayat_laporan .laporan > div .detail_laporan h4 {
   font-weight: 800;
@@ -274,10 +282,12 @@ main .container .riwayat_laporan .laporan > div .detail_laporan .pengusul {
 main .container .riwayat_laporan .laporan > div .detail_laporan .category {
   grid-area: right;
   opacity: 0.7;
+  margin-top: -10px;
+  font-size: 12px !important;
 }
 main .container .riwayat_laporan .laporan > div .detail_laporan p {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   grid-area: area;
 }
 main .container .riwayat_laporan .laporan > div .icon_status {
