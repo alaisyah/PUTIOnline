@@ -12,7 +12,7 @@
       <div class="container">
         <div class="nav_brand">
           <img src="../assets/img/logo.png" alt="Logo PUTI ONLINE" />
-          <h4>PUTI<br />ONLINE</h4>
+          <h4>PUTI<br /> ONLINE</h4>
         </div>
         <!-- <ul class="list_link">
             <li><a href="index.html">Home</a></li>
@@ -44,46 +44,60 @@
             </div>
             <div class="category_search">
                 <label for="category" class="bold">Select Category:</label>
-                <span class="checkbox">
-                    <input type="checkbox" name="all" id="all">
+                
+                    <a href="#">
+                      <input type="checkbox" name="all" id="all">
                     <label for="all">ALL
                     </label>
-                </span>
-                <span class="checkbox">
-                    <input type="checkbox" name="fasilitas" id="fasilitas">
+                    </a>
+                
+                
+                    <a href="#">
+                      <input type="checkbox" name="fasilitas" id="fasilitas">
                     <label for="fasilitas">Fasilitas Umum
                     </label>
-                </span>
-                <span class="checkbox">
-                    <input type="checkbox" name="laboratorium" id="laboratorium">
+                    </a>
+                
+                
+                    <a href="#">
+                      <input type="checkbox" name="laboratorium" id="laboratorium">
                     <label for="laboratorium">Laboratorium
                     </label>
-                </span>
-                <span class="checkbox">
-                    <input type="checkbox" name="kebersihan" id="kebersihan">
+                    </a>
+                
+                
+                    <a href="#">
+                      <input type="checkbox" name="kebersihan" id="kebersihan">
                     <label for="kebersihan">Kebersihan
                     </label>
-                </span>
+                    </a>
+                
             </div>
           </form>
         <div class="riwayat_laporan">
           <div>
-            <img src="../assets/img/laporan.png" alt="bukti_laporan" />
-            <div class="detail_laporan">
-              <h4 class="pengusul">Pengusul: <span>Fulan bin Fulan</span></h3>
-              <h4 class="category">#<span>Fasilitas Umum</span></h4>
-              <p>
-                Usulan: <br />
-                <span
-                  >Kamar Mandi lantai atas gagang pintunya lepas sehingga susah
-                  untuk membuka pintu dari dalam kamar mandi.</span
-                >
-              </p>
+            <div class="laporan">
+              <img src="../assets/img/laporan.png" alt="bukti_laporan" />
+              <div class="detail_laporan">
+                <h4 class="pengusul">Pengusul: <span>Fulan bin Fulan</span></h3>
+                <h4 class="category">#<span>Fasilitas Umum</span></h4>
+                <p>
+                  Usulan: <br />
+                  <span
+                    >Kamar Mandi lantai atas gagang pintunya lepas sehingga susah
+                    untuk membuka pintu dari dalam kamar mandi.</span
+                  >
+                </p>
+              </div>
+              <div class="status">
+                <a href="#" class="approve">APPROVE</a>
+                <a href="#" class="delete">DELETE</a>
+              </div>
             </div>
-            <div class="status">
-              <a href="#" class="approve">APPROVE</a>
-              <a href="#" class="delete">DELETE</a>
-            </div>
+            <form action="" method="get">
+              <textarea name="feedback" id="feedback" cols="10" rows="1"></textarea>
+              <button type="submit" id="btn_feedback">Kirim</button>
+            </form>
           </div>
         </div>
       </div>
@@ -92,5 +106,18 @@
     <footer>
       <p class="container">Copyright &copy; 2023 by PUTI ONLINE</p>
     </footer>
+
+    <script>
+      let feedback = document.getElementById("feedback");
+      let button = document.getElementById("btn_feedback");
+
+      feedback.addEventListener("keydown", (e) => {
+        if (e.target.value.length > 0) {
+          button.style.display = "block"
+        }else{
+          button.style.display = "none"
+        }
+      })
+    </script>
   </body>
 </html>
