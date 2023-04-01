@@ -7,6 +7,7 @@ $second-color: #f2deba;
   margin: 0;
   padding: 0;
   font-family: Poppins, sans-serif;
+  outline: 1px solid red;
 }
 
 .container {
@@ -25,6 +26,7 @@ nav {
   width: 100%;
   background-color: $primary-color;
   z-index: 1;
+  box-sizing: border-box;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.222);
   .container {
     display: grid;
@@ -300,6 +302,7 @@ main {
 
 footer {
   background-color: $primary-color;
+  overflow-x: hidden;
   p {
     padding: 14px;
     text-align: center;
