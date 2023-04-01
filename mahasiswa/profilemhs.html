@@ -15,9 +15,9 @@
           <h4>PUTI<br />ONLINE</h4>
         </div>
         <!-- <ul class="list_link">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tatacara.html">Tata Cara</a></li>
-          </ul> -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tatacara.html">Tata Cara</a></li>
+        </ul> -->
         <!-- <a href="mahasiswa/loginmhs.html" class="btn_login">Login</a> -->
         <p>Pengaduan Umum TI</p>
         <div class="profile_mhs">
@@ -29,7 +29,7 @@
           <div class="name">
             <p>Fulan bin Fulan</p>
             <img src="../assets/img/arrow-drop.png" alt="Arrow Drop" />
-            <input type="checkbox" name="check" id="check" />
+            <input type="checkbox" name="check" id="check">
             <ul>
               <li><a href="../index.html">Dashboard</a></li>
               <li><a href="profilemhs.html">Profile Saya</a></li>
@@ -57,23 +57,30 @@
         </div>
         <div class="riwayat_laporan">
           <h3>Riwayat Laporan</h3>
-          <div>
-            <img src="../assets/img/laporan.png" alt="bukti_laporan" />
-            <div class="detail_laporan">
-              <h4 class="pengusul">Pengusul: <span>Fulan bin Fulan</span></h3>
-              <h4 class="category">#<span>Fasilitas Umum</span></h4>
-              <p>
-                Usulan: <br />
-                <span
-                  >Kamar Mandi lantai atas gagang pintunya lepas sehingga susah
-                  untuk membuka pintu dari dalam kamar mandi.</span
-                >
-              </p>
+          <div class="laporan">
+            <div>
+              <img src="../assets/img/laporan.png" alt="bukti_laporan" />
+              <div class="detail_laporan">
+                <h4 class="pengusul">Pengusul: <span>Fulan bin Fulan</span></h3>
+                <h4 class="category">#<span>Fasilitas Umum</span></h4>
+                <p>
+                  Usulan: <br />
+                  <span
+                    >Kamar Mandi lantai atas gagang pintunya lepas sehingga susah
+                    untuk membuka pintu dari dalam kamar mandi.</span
+                  >
+                </p>
+              </div>
+              <div class="icon_status approved">
+                <img src="../assets/img/approved.png" alt="status-icon">
+                <p>APPROVE</p>
+              </div>
+  
             </div>
-            <div class="icon_status approved">
-              <img src="../assets/img/approved.png" alt="status-icon">
-              <p>APPROVE</p>
-            </div>
+            <form action="" method="get">
+              <textarea name="feedback" id="feedback" cols="10" rows="1" readonly>Default Value</textarea>
+              <button type="submit" id="btn_feedback">Kirim</button>
+            </form>
           </div>
         </div>
       </div>

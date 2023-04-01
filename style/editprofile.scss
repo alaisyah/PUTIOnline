@@ -12,6 +12,9 @@ $second-color: #f2deba;
 .container {
   width: 80%;
   margin: auto;
+  @media screen and (max-width: 1100px) {
+    width: 95%;
+  }
 }
 
 nav {
@@ -25,11 +28,25 @@ nav {
   width: 100%;
   background-color: $primary-color;
   z-index: 999;
+  padding: 15px 0;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.205);
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 860px) {
+      flex-direction: column;
+      & > p {
+        display: none;
+      }
+      .nav_brand {
+        width: 100%;
+        margin-bottom: 10px;
+        h4 br {
+          display: none;
+        }
+      }
+    }
     .nav_brand {
       display: flex;
       justify-content: center;
@@ -150,12 +167,16 @@ nav {
 
 main {
   .container {
-    margin: 130px;
+    margin: 150px auto;
     color: $primary-color;
     h1 {
       font-weight: 800;
       margin: 42px 0 52px;
       text-align: center;
+      @media screen and (max-width: 1100px) {
+        font-size: 26px;
+        margin: 52px 0 32px;
+      }
     }
     form {
       display: flex;
@@ -170,10 +191,18 @@ main {
         height: 240px;
         overflow: hidden;
         margin: 0 auto 50px;
+        @media screen and (max-width: 1100px) {
+          width: 140px;
+          height: 140px;
+        }
         img {
           width: 240px;
           height: 240px;
           object-fit: cover;
+          @media screen and (max-width: 1100px) {
+            width: 140px;
+            height: 140px;
+          }
         }
         &:hover {
           label {
@@ -217,7 +246,7 @@ main {
         padding: 10px;
         box-sizing: border-box;
       }
-      &>input{
+      & > input {
         background-color: transparent;
         border: 3px solid $primary-color;
         border-radius: 3px;
@@ -225,15 +254,19 @@ main {
         color: $primary-color;
         font-weight: 500;
       }
-      button{
+      button {
         background-color: $primary-color;
-        border: none; outline: none;
+        border: none;
+        outline: none;
         font-weight: 800;
         font-size: 16px;
         color: white;
         cursor: pointer;
         border-radius: 3px;
-        &:hover{
+        @media screen and (max-width: 1100px) {
+          font-size: 14px;
+        }
+        &:hover {
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.238);
         }
       }
@@ -243,11 +276,17 @@ main {
 
 footer {
   background-color: $primary-color;
+  overflow-x: hidden;
+  margin-top: 100px;
   p {
     padding: 14px;
     text-align: center;
     font-size: 15px;
     color: white;
     font-weight: 800;
+    @media screen and (max-width: 1100px) {
+      font-size: 12px;
+      font-weight: 600;
+    }
   }
 }

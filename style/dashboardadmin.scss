@@ -12,6 +12,9 @@ $second-color: #f2deba;
 .container {
   width: 80%;
   margin: auto;
+  @media screen and (max-width: 1100px) {
+    width: 95%;
+  }
 }
 
 nav {
@@ -347,8 +350,9 @@ main {
             color: $primary-color;
             font-weight: 600;
             outline: none;
+            box-sizing: border-box;
           }
-          button{
+          button {
             position: absolute;
             right: 0;
             bottom: 0;

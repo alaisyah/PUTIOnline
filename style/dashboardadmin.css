@@ -9,6 +9,11 @@
   width: 80%;
   margin: auto;
 }
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 95%;
+  }
+}
 
 nav {
   background-color: #0e5e6f;
@@ -350,6 +355,7 @@ main .container .riwayat_laporan > div form textarea {
   color: #0e5e6f;
   font-weight: 600;
   outline: none;
+  box-sizing: border-box;
 }
 main .container .riwayat_laporan > div form button {
   position: absolute;

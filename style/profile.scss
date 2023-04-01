@@ -12,6 +12,9 @@ $second-color: #f2deba;
 .container {
   width: 80%;
   margin: auto;
+  @media screen and (max-width: 1100px) {
+    width: 95%;
+  }
 }
 
 nav {
@@ -25,11 +28,25 @@ nav {
   width: 100%;
   background-color: $primary-color;
   z-index: 999;
+  padding: 15px 0;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.205);
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 860px) {
+      flex-direction: column;
+      & > p {
+        display: none;
+      }
+      .nav_brand {
+        width: 100%;
+        margin-bottom: 10px;
+        h4 br {
+          display: none;
+        }
+      }
+    }
     .nav_brand {
       display: flex;
       justify-content: center;
@@ -150,7 +167,7 @@ nav {
 
 main {
   .container {
-    margin: 120px;
+    margin: 120px 0;
     color: $primary-color;
     .profile {
       margin: 220px 0 180px;
@@ -159,6 +176,9 @@ main {
       justify-content: center;
       align-items: center;
       column-gap: 40px;
+      @media screen and (max-width: 1100px) {
+        flex-direction: column;
+      }
       img {
         width: 130px;
         height: 130px;
@@ -167,6 +187,9 @@ main {
         border: 5px solid $primary-color;
       }
       .detail {
+        @media screen and (max-width: 1100px) {
+          text-align: center;
+        }
         h1 {
           font-weight: 800;
         }
@@ -201,57 +224,116 @@ main {
         font-size: 24px;
         margin: -50px 0 44px;
       }
-      h3 + div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        background-color: $second-color;
-        border: 2px solid $primary-color;
-        border-radius: 5px;
-        padding: 15px;
-        box-sizing: border-box;
-        .detail_laporan {
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          row-gap: 10px;
-          grid-template-areas:
-            "left right"
-            "area area";
-          h4{
-            font-weight: 800;
-            font-size: 14px;
-          }
-          .pengusul {
-            grid-area: left;
-          }
-          .category {
-            grid-area: right;
-            opacity: 0.7;
-          }
-          p {
-            font-weight: 600;
-            font-size: 14px;
-            grid-area: area;
-          }
-        }
-        .icon_status{
+      .laporan {
+        & > div {
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column;
-          gap: 10px;
-          font-weight: 600;
-          font-size: 12px;
-          color: white;
-          padding: 10px 25px;
-          border-radius: 3px;
+          gap: 25px;
+          background-color: $second-color;
+          border: 2px solid $primary-color;
+          border-radius: 5px;
+          padding: 15px;
+          box-sizing: border-box;
+          @media screen and (max-width: 1100px) {
+            display: grid;
+            grid-template-columns: 1fr max-content;
+            grid-template-areas:
+              "foto foto"
+              "deskripsi icon";
+            align-items: end;
+          }
+          img {
+            @media screen and (max-width: 1100px) {
+              grid-area: foto !important;
+              margin: auto;
+            }
+          }
+          .detail_laporan {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            row-gap: 10px;
+            grid-template-areas:
+              "left right"
+              "area area";
+            @media screen and (max-width: 1100px) {
+              grid-area: deskripsi !important;
+              grid-template-areas:
+                "left left"
+                "right right"
+                "area area";
+            }
+            h4 {
+              font-weight: 800;
+              font-size: 14px;
+            }
+            .pengusul {
+              grid-area: left;
+            }
+            .category {
+              grid-area: right;
+              opacity: 0.7;
+            }
+            p {
+              font-weight: 600;
+              font-size: 14px;
+              grid-area: area;
+            }
+          }
+          .icon_status {
+            @media screen and (max-width: 1100px) {
+              grid-area: icon !important;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 12px;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 3px;
+          }
+          .approved {
+            background-color: $primary-color;
+          }
+          .unapproved {
+            background-color: red;
+          }
         }
-        .approved{
-          background-color: $primary-color;
-        }
-        .unapproved{
-          background-color: red;
+        form {
+          width: 100%;
+          margin-bottom: 10px;
+          position: relative;
+          z-index: 99;
+          textarea {
+            width: 100%;
+            margin-top: -5px;
+            padding: 7px;
+            font-size: 12px;
+            border-radius: 0 0 5px 5px;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            font-weight: 600;
+            outline: none;
+            z-index: 999;
+            box-sizing: border-box;
+          }
+          button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 4px;
+            display: none;
+            padding: 5px;
+            font-size: 12px;
+            background-color: $primary-color;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -260,11 +342,17 @@ main {
 
 footer {
   background-color: $primary-color;
+  overflow-x: hidden;
+  margin-top: 100px;
   p {
     padding: 14px;
     text-align: center;
     font-size: 15px;
     color: white;
     font-weight: 800;
+    @media screen and (max-width: 1100px) {
+      font-size: 12px;
+      font-weight: 600;
+    }
   }
 }
