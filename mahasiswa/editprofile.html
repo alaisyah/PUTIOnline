@@ -54,13 +54,14 @@
               </label>
             </div>
             <label for="nama">Nama Mahasiswa</label>
-            <input type="text" name="nama" value="FULAN BIN FULAN" id="nama" />
+            <input type="text" name="nama" value="FULAN BIN FULAN" id="nama"  readonly/>
             <label for="username">Username</label>
             <input
               type="text"
               name="username"
               value="362258302178"
-              id="usename"
+              id="username"
+              readonly
             />
             <label for="password">Password</label>
             <input
@@ -77,6 +78,13 @@
       <footer>
         <p class="container">Copyright &copy; 2023 by PUTI ONLINE</p>
       </footer>
+      <script>
+        const nama = document.getElementById("nama")
+        const username = document.getElementById("username")
+
+        nama.addEventListener("click", () => alert("Nama tidak dapat diubah!"))
+        username.addEventListener("click", () => alert("Username tidak dapat diubah!"))
+      </script>
     </body>
   </body>
 </html>

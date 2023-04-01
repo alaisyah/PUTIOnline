@@ -235,6 +235,9 @@ main {
           }
         }
       }
+      input:read-only{
+        background-color: #0e5d6f3d;
+      }
       & > label,
       & > input,
       button {

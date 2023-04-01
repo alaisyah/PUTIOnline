@@ -240,6 +240,12 @@ main .container form .image label input[type=file] {
   position: absolute;
   display: none;
 }
+main .container form input:-moz-read-only {
+  background-color: rgba(14, 93, 111, 0.2392156863);
+}
+main .container form input:read-only {
+  background-color: rgba(14, 93, 111, 0.2392156863);
+}
 main .container form > label, main .container form > input,
 main .container form button {
   width: 70%;
