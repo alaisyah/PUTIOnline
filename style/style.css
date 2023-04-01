@@ -9,90 +9,217 @@
   width: 80%;
   margin: auto;
 }
+@media screen and (max-width: 860px) {
+  .container {
+    width: 98%;
+  }
+}
 
 nav {
-  background-color: #0e5e6f;
-  height: 114px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   width: 100%;
   background-color: #0e5e6f;
-  z-index: 999;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.205);
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.222);
 }
 nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  position: relative;
+  padding: 10px 0;
+}
+@media screen and (min-width: 700px) {
+  nav .container {
+    justify-content: space-evenly !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "brand link button";
+  }
 }
 nav .container .nav_brand {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 700px) {
+  nav .container .nav_brand {
+    justify-content: flex-start !important;
+    grid-area: brand;
+  }
 }
 nav .container .nav_brand img {
-  width: 55px;
-  margin-right: 15px;
+  width: 50px;
 }
 nav .container .nav_brand h4 {
-  font-size: 24px;
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 20px;
   color: white;
-  line-height: 113.5%;
+}
+nav .container .nav_brand h4 br {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  nav .container .nav_brand h4 br {
+    display: block;
+  }
+}
+nav .container .burger_menu {
+  background-image: url(../assets/img/menu.png);
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media screen and (min-width: 700px) {
+  nav .container .burger_menu {
+    display: none;
+  }
+}
+nav .container input {
+  opacity: 0;
+}
+nav .container #label {
+  cursor: pointer;
+}
+nav .container .grid {
+  display: grid !important;
 }
 nav .container .list_link {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "left right" "button button";
+  box-sizing: border-box;
 }
-nav .container .list_link li:not(:last-child) {
-  margin-right: 64px;
+@media screen and (min-width: 700px) {
+  nav .container .list_link {
+    display: grid;
+  }
+}
+nav .container .list_link li {
+  text-align: center;
+  list-style: none;
 }
 nav .container .list_link li a {
-  color: white;
   text-decoration: none;
-  font-size: 16px;
-  transition: all 0.2s ease-in-out;
-  font-weight: 500;
-}
-nav .container .list_link li a:hover {
-  font-weight: 800;
-}
-nav .container .btn_login {
-  padding: 4px 26px;
-  border: 2px solid white;
-  border-radius: 4px;
   color: white;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
+  display: block;
+  border-radius: 3px;
+  padding: 7px;
   transition: all ease-in-out 0.3s;
 }
-nav .container .btn_login:hover {
+nav .container .list_link li a:hover {
+  background-color: #104f5d;
+}
+@media screen and (min-width: 700px) {
+  nav .container .list_link li a:hover {
+    background: none;
+    font-weight: bold;
+  }
+}
+nav .container .list_link .home {
+  grid-area: left;
+}
+nav .container .list_link .cara {
+  grid-area: right;
+}
+nav .container .list_link .btn_login {
+  grid-area: button;
+}
+@media screen and (min-width: 700px) {
+  nav .container .list_link .btn_login {
+    display: none;
+  }
+}
+nav .container .btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  nav .container .btn {
+    display: none;
+  }
+}
+nav .container .btn a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid white;
+  font-weight: 600;
+  border-radius: 3px;
+  font-size: 18px;
+  transition: all ease-in-out 0.3s;
+}
+nav .container .btn a:hover {
   background-color: white;
   color: #0e5e6f;
 }
 
 main {
-  margin-top: 114px;
+  margin-top: 68px !important;
   background-color: #0e5e6f;
   color: white;
   font-size: 38px;
   font-weight: 800;
-  height: 490px;
+  height: 476px;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 1052px) {
+  main {
+    height: 100%;
+    margin-top: 80px;
+    padding: 20px;
+  }
 }
 main .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 1052px) {
+  main .container .left {
+    width: 100% !important;
+    text-align: center;
+  }
+  main .container .left h1 {
+    font-size: 36px;
+    font-weight: 900;
+  }
+  main .container .left p {
+    text-align: center;
+    margin: auto;
+    font-size: 14px !important;
+    margin-bottom: 15px !important;
+  }
+  main .container .left a {
+    font-size: 12px !important;
+    font-weight: 700;
+    padding: 5px 8px !important;
+    text-decoration: none;
+    color: #0e5e6f;
+    background-color: #f2deba;
+    border-radius: 2px !important;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  main .container .right {
+    display: none;
+  }
 }
 main .container .left {
   width: 60%;
+  overflow-y: hidden;
 }
 main .container .left p {
   width: 80%;
@@ -123,14 +250,28 @@ main .container .right img {
   font-weight: 900;
   color: #0e5e6f;
 }
+@media screen and (max-width: 1052px) {
+  .category_laporan h2 {
+    font-size: 25px;
+  }
+}
 .category_laporan section.category {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media screen and (max-width: 1052px) {
+  .category_laporan section.category {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
 .category_laporan section.category div {
   position: relative;
+  display: flex;
   width: 285px;
   height: 285px;
   background-color: #f2deba;
@@ -143,7 +284,7 @@ main .container .right img {
   padding: 27px;
 }
 .category_laporan section.category div .kotak {
-  z-index: -999;
+  z-index: -1;
   position: absolute;
   margin-top: 5px;
   margin-left: 5px;
@@ -154,9 +295,6 @@ main .container .right img {
   display: block;
   background-color: #0e5e6f;
   border-radius: 5px;
-}
-.category_laporan section.category div:not(:last-child) {
-  margin-right: 20px;
 }
 .category_laporan section.category div h3 {
   font-size: 22px;
@@ -180,4 +318,10 @@ footer p {
   font-size: 15px;
   color: white;
   font-weight: 800;
+}
+@media screen and (max-width: 1100px) {
+  footer p {
+    font-size: 12px;
+    font-weight: 600;
+  }
 }/*# sourceMappingURL=style.css.map */
