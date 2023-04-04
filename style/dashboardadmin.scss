@@ -225,13 +225,15 @@ main {
         font-weight: 700;
       }
       .category_search {
-        a {
+        span {
           border: 1px solid $primary-color;
           position: relative;
           box-sizing: border-box;
           border-radius: 3px;
           text-decoration: none;
           color: $primary-color;
+          display: inline-block;
+          z-index: 9;
           &:not(:last-child) {
             margin-right: 5px;
           }
@@ -244,17 +246,24 @@ main {
             display: none;
             &:checked {
               & ~ label {
-                background-color: $primary-color;
+                background-color: $primary-color !important;
                 color: white;
+                background-color: #f2deba;
               }
             }
           }
           label {
+            width: 100%;
             height: 100%;
             cursor: pointer;
+            display: inline-block;
             padding: 3px;
+            box-sizing: border-box;
             font-size: 14px;
             font-weight: 600;
+            color: $primary-color;
+            text-decoration: none;
+            position: relative;
           }
         }
       }
@@ -320,7 +329,7 @@ main {
             @media screen and (max-width: 860px) {
               flex-direction: row;
             }
-            a {
+            button {
               width: 100px;
               height: 27px;
               display: grid;
@@ -328,6 +337,8 @@ main {
               text-decoration: none;
               color: white;
               border-radius: 3px;
+              border: none;
+              cursor: pointer;
             }
           }
           .approve {
@@ -337,7 +348,7 @@ main {
             background-color: red;
           }
         }
-        form {
+        .form {
           width: 100%;
           margin-bottom: 10px;
           position: relative;

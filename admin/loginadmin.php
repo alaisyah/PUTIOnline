@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,8 +22,8 @@
           <input type="checkbox" name="burger" id="burger" />
         </label>
         <ul class="list_link" id="link">
-          <li class="home"><a href="../index.html">Home</a></li>
-          <li class="cara"><a href="../tatacara.html">Tata Cara</a></li>
+          <li class="home"><a href="../index.php">Home</a></li>
+          <li class="cara"><a href="../tatacara.php">Tata Cara</a></li>
         </ul>
       </div>
     </nav>
@@ -31,7 +32,7 @@
       <main>
         <h2>LOGIN ADMIN</h2>
         <p>Please login with your account</p>
-        <form action="">
+        <form action="" method="post">
           <label for="username">Username</label>
           <div class="input-form">
             <img src="../assets/img/user.png" alt="user-icon" width="24px" />
@@ -42,11 +43,32 @@
             <img src="../assets/img/lock.png" alt="lock-icon" width="24px" />
             <input type="text" name="password" id="password" />
           </div>
-          <button type="submit">Login Now</button>
-          <a href="../mahasiswa/loginmhs.html">Login as Mahasiswa</a>
+          <button type="submit" name="submit">Login Now</button>
+          <a href="../mahasiswa/loginmhs.php">Login as Mahasiswa</a>
         </form>
       </main>
     </div>
+
+     <?php 
+      include 'conDB.php';
+      if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $pass = $_POST['password'];
+
+        $cek = mysqli_query($conn, "SELECT * FROM admin WHERE nip='".$username."' AND password='".$pass."'");
+          if (mysqli_num_rows($cek) >0) {
+            $d = mysqli_fetch_object($cek);
+            $_SESSION['status_login'] = true;
+            $_SESSION['a_global'] = $d;
+            $_SESSION['id'] = $d->id_admin;
+            echo '<script>window.location="dashboard.php"</script>';
+        }else{
+            echo '<script>alert("username atau password anda salah!")</script>';
+        
+          }
+      }
+      
+    ?>
 
     <footer>
       <p class="container">Copyright &copy; 2023 by PUTI ONLINE</p>
