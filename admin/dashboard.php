@@ -93,7 +93,7 @@ if ($_SESSION['status_login'] != true) {
     let button = document.getElementById("btn_feedback");
     const riwayat = document.querySelector(".riwayat_laporan");
     const search = document.querySelector("#search")
-    const span = document.querySelectorAll(".category_search");
+    const span = document.querySelectorAll(".category_search span");
 
     search.addEventListener("keyup", (e) => {
       let xhr = new XMLHttpRequest()

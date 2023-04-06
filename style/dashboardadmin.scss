@@ -163,7 +163,6 @@ nav {
     }
   }
 }
-
 main {
   min-height: 100vh - 10vh;
   .container {
@@ -224,6 +223,7 @@ main {
       .bold {
         font-weight: 700;
       }
+
       .category_search {
         span {
           border: 1px solid $primary-color;
@@ -233,7 +233,7 @@ main {
           text-decoration: none;
           color: $primary-color;
           display: inline-block;
-          z-index: 9;
+          // z-index: -9;
           &:not(:last-child) {
             margin-right: 5px;
           }

@@ -240,7 +240,6 @@ main .container form .category_search span {
   text-decoration: none;
   color: #0e5e6f;
   display: inline-block;
-  z-index: 9;
 }
 main .container form .category_search span:not(:last-child) {
   margin-right: 5px;
