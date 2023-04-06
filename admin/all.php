@@ -1,7 +1,6 @@
 <?php
-$ambil = $conn->query("SELECT * FROM laporan,mahasiswa,kategori,status_laporan where status_laporan.status='terkirim' and status_laporan.id_status=laporan.id_status and laporan.nim=mahasiswa.nim and laporan.id_kategori=kategori.id_kategori ");
+$ambil = $conn->query("SELECT * FROM laporan,mahasiswa,kategori,status_laporan where status_laporan.status='approve' OR status_laporan.status='unapprove' OR status_laporan.status='terkirim' and status_laporan.id_status=laporan.id_status and laporan.nim=mahasiswa.nim and laporan.id_kategori=kategori.id_kategori ");
 while ($perlaporan = $ambil->fetch_assoc()) { ?>
-
   <div>
     <div class="laporan">
       <img src="../assets/img/laporan.png" alt="bukti_laporan" />

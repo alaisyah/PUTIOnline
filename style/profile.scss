@@ -191,7 +191,7 @@ main {
           text-align: center;
           display: flex;
           flex-direction: column;
-          a{
+          a {
             margin: 0 0 10px !important;
           }
         }
@@ -267,9 +267,9 @@ main {
                 "left left"
                 "right right"
                 "area area";
-                p{
-                  font-size: 12px !important;
-                }
+              p {
+                font-size: 12px !important;
+              }
             }
             h4 {
               font-weight: 800;
@@ -310,6 +310,9 @@ main {
           }
           .unapproved {
             background-color: red;
+          }
+          .pending {
+            background-color: #ec9408;
           }
         }
         form {

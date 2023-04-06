@@ -3,7 +3,7 @@ include '../admin/conDB.php';
 $keyword = $_GET["keyword"];
 
 $semuadata = array();
-$ambil = $conn->query("SELECT * FROM laporan,mahasiswa,kategori WHERE laporan.keluhan LIKE '%$keyword%' and laporan.nim=mahasiswa.nim and laporan.id_kategori=kategori.id_kategori");
+$ambil = $conn->query("SELECT * FROM laporan,mahasiswa,kategori WHERE laporan.keluhan LIKE '%$keyword%' OR kategori.nama_kategori LIKE '%$keyword%' OR mahasiswa.nama LIKE '%$keyword%' and laporan.nim=mahasiswa.nim and laporan.id_kategori=kategori.id_kategori");
 while ($pecah = $ambil->fetch_assoc()) {
   $semuadata[] = $pecah;
 }
