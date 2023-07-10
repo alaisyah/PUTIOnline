@@ -9,6 +9,10 @@ $second-color: #f2deba;
   font-family: Poppins, sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -190,8 +194,8 @@ main {
       outline: 1px solid black;
       margin-right: 25px;
       @media screen and (max-width: 1100px) {
-        width: 55px;
-        height: 55px;
+        width: 32px;
+        height: 32px;
       }
       .bottom_nomor {
         position: absolute;
@@ -205,8 +209,8 @@ main {
         z-index: -999;
         outline: 1px solid black;
         @media screen and (max-width: 1100px) {
-          width: 55px;
-          height: 55px;
+          width: 32px;
+          height: 32px;
           margin-top: 5px;
           margin-left: 5px;
         }
@@ -240,14 +244,15 @@ main {
         font-weight: 800;
         font-size: 30px;
         @media screen and (max-width: 1100px) {
-            font-size: 22px;
+            font-size: 16px;
         }
       }
       .desc {
         margin-top: -30px;
         padding: 20px;
         @media screen and (max-width: 1100px) {
-            font-size: 14px;
+            font-size: 12px;
+            font-weight: 600;
         }
         ul {
           padding-left: 30px;

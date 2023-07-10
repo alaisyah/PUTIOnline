@@ -13,6 +13,11 @@ body {
   background-color: $second-color;
   max-height: max-content;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -177,14 +182,14 @@ main {
     font-size: 40px;
     text-align: center;
     @media screen and (max-width: 1100px) {
-      font-size: 32px;
+      font-size: 28px;
     }
   }
   p {
     font-weight: 600;
     font-size: 20px;
     text-align: center;
-    margin: 16px auto 54px;
+    margin: 10px auto 44px;
     @media screen and (max-width: 1100px) {
       font-size: 16px;
     }

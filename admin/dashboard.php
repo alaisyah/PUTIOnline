@@ -14,6 +14,9 @@ if ($_SESSION['status_login'] != true) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laporan Mahasiswa</title>
   <link rel="stylesheet" href="../style/dashboardadmin.css?version=<?php echo filemtime('../style/dashboardadmin.css'); ?>">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
 </head>
 
 <body>
@@ -30,8 +33,8 @@ if ($_SESSION['status_login'] != true) {
           <img src="../assets/img/arrow-drop.png" alt="Arrow Drop" />
           <input type="checkbox" name="check" id="check" />
           <ul>
-            <li><a href="../index.html">Dashboard</a></li>
-            <li><a href="loginadmin.html">Logout</a></li>
+            <li><a href="../index.php">Dashboard</a></li>
+            <li><a href="../logout.php">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -50,7 +53,6 @@ if ($_SESSION['status_login'] != true) {
       <form>
         <div class="category_search">
           <label for="category" class="bold">Select Category:</label>
-
           <span>
             <input type="checkbox" name="all" id="all">
             <label for="all" class="all">ALL</label>
@@ -80,7 +82,7 @@ if ($_SESSION['status_login'] != true) {
       </form>
 
       <div class="riwayat_laporan">
-       <?php include 'all.php' ?>
+       <?php include '../ajax/all.php' ?>
       </div>
   </main>
 
@@ -93,7 +95,7 @@ if ($_SESSION['status_login'] != true) {
     let button = document.getElementById("btn_feedback");
     const riwayat = document.querySelector(".riwayat_laporan");
     const search = document.querySelector("#search")
-    const span = document.querySelectorAll(".category_search span");
+    const span = document.querySelectorAll(".category_search");
 
     search.addEventListener("keyup", (e) => {
       let xhr = new XMLHttpRequest()
