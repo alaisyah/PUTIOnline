@@ -26,8 +26,8 @@ if ($_SESSION['nim'] != true) {
       <p>Pengaduan Umum TI</p>
       <div class="profile_mhs">
         <img class="profile" src="../assets/foto profilemhs/<?php echo $_SESSION['nim']['fotomhs'] ?>" alt="Profile_Mahasiswa" />
-        <div class="name">
-          <p><?php echo $_SESSION['nim']['nama'] ?></p>
+
+        <p><?php echo $_SESSION['nim']['nama'] ?></p>
           <img src="../assets/img/arrow-drop.png" alt="Arrow Drop" />
           <input type="checkbox" name="check" id="check">
           <ul>
